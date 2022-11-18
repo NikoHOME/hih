@@ -1,34 +1,82 @@
+
+
 <!DOCTYPE html>
 
-<html>
+<html lang="pl">
     <head>
+        <title> Galeria Dań</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-        <link rel="stylesheet" href="style.css">
-    
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="jquery/jquery-1.11.2.min.js"></script>
+        <script src="main.js"></script>
     </head>
-    <body>
+    <body class="body edit" onload="onLoad();">
 
-        <nav class="topnav">
-            <a href="index.html">Home</a>
-            <a class="active" href="#Gallery">Galeria</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+        <nav class="topnav edit">
+            <span class="main"> Projekt WAI </span>
+            <img src="img/sun.png" id="modeImg" alt="sun">
+            <label class="switch">
+                <input id="checkBox" type="checkbox" onclick="manageModes();">
+                <span class="slider"></span>
+            </label>
+            <a class="active" href="#Home">Galeria</a>
+            <a href="recipe.html">Przepisy</a>
+            <a href="index.html">Front</a>
         </nav>
-
-        <header class="header" id="Gallery">
+        <header class="header edit" id="Home">
             <div>
-                <h1 class="title" > Moje Hobby </h1>
+                <h1 class="title edit" > Kolekcja dań pokazowych </h1>
             </div>
         </header>
+        <hr class="solid edit">
+        <section class="content edit">
+            <ul style="list-style-type: square;">
+                <li class="margin-left large-text"> 
+                    <span>Mięsa długopieczone</span>
+                    <div class="min-height">
+                        <span class="small-text">
+                            Przepisy na mięso pieczone dzięki swojej prostocie nie są wrażliwe na modyfikacji dzięki czemu łatwo jest dodać swój originalny dodatek.
+                        </span>
+                    </div>
+                </li>
+                <li class="margin-left large-text">
+                    <span>Stek strogonof na patelni</span>
+                    <div class="min-height">
+                        <span class="small-text">
+                            Mięso z patelni to jedno z podstawowych części obiadu ale niewiele osób potrafi wykorzystać soki mięsne i aromaty wydobywające się podczas smażenia, 
+                            które tworzą idelna baze do sosu.
+                        </span>
+                    </div>
+                </li>                    
+                <li class="margin-left large-text">
+                    <span>Crossaint</span>
+                    <div class="min-height">
+                        <span class="small-text">
+                            Crossainty oraz inne rogale są zadziwająco przydatne w codziennej kuchni oraz wyglądają nieziemsko przy dobrym wykonaniu.  
+                        </span>
+                    </div>
+                </li>  
+                <li class="margin-left large-text">
+                    <span>Mule na winie</span>
+                    <div class="min-height">
+                        <span class="small-text">
+                            Mule często kojarzą się z drogimi daniami z restauracji, jednakżke ich przygotowanie nie jest, aż tak skomplikowane ale robi wrażenie.
+                        </span>
+                    </div>
+                </li>  
+            </ul>
+        </section>
+        
+        <section class="content edit">
 
-        <section class="content">
+        
 
         </section>
-
-        <footer class="footer">
-            <div>
-                <h1 class="title"> footer </h1>
+        <hr class="solid edit">
+        <footer>
+            <div class="footer edit" style="position: relative;"> 
+                <span class="subtitle edit corner-text">Wiktor Gawroński</span>
             </div>
         </footer>
 

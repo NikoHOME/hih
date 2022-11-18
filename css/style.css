@@ -1,0 +1,316 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(227, 245, 249);
+}
+
+
+hr.solid {
+  border-top: 3px solid rgb(117, 128, 128);
+  margin:0;
+  width: 100%;
+}
+
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  position: fixed; 
+  background-position: 30px;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  z-index: 1000; 
+}
+
+.topnav a {
+  float: right;
+  color: rgb(55, 71, 79);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav span {
+  float: left;
+  color: rgb(55, 71, 79);
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.topnav a:hover {
+  background-color: rgb(57, 54, 54);
+  color: white;
+}
+
+.topnav a.active {
+  background-color: slategray;
+  color: white;
+}
+
+
+.header {
+    background-color: lightgrey;    
+    padding-top: 25px;
+    padding-left: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.content{
+  color: rgb(55, 71, 79);
+  background-color: rgb(189, 181, 181);
+}
+
+
+.title {
+    padding-left: 25px;
+    color: rgb(55, 71, 79);
+    font-size: 60px;
+    display: flex;
+}
+
+.subtitle {
+  padding-left: 35px;
+  color: rgb(55, 71, 79);
+  font-size: 35px;
+}
+
+.footer {
+    background-color:lightgrey;
+    margin-top: auto;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+
+.body-dark {
+  display: flex;
+  flex-direction: column;
+  background-color: #181a1b;
+}
+
+hr.solid-dark {
+  border-top: 3px solid rgb(38, 40, 40);
+  margin:0;
+  width: 100%;
+}
+
+
+.topnav-dark {
+  background-color: black;
+  overflow: hidden;
+  position: fixed; 
+  background-position: 30px;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  z-index: 1000; 
+}
+
+.topnav-dark a {
+  float: right;
+  color: rgb(150, 190, 210);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav-dark span {
+  float: left;
+  color: rgb(140, 182, 204);
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.topnav-dark a:hover {
+  background-color: rgb(100, 154, 154);
+  color: black;
+}
+
+.topnav-dark a.active {
+  background-color: rgb(98, 111, 124);
+  color: black;
+}
+
+
+.header-dark {
+    background-color: rgb(62, 62, 62);    
+    padding-top: 25px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.content-dark{
+  color: rgb(195, 215, 225);
+  background-color: rgb(85, 80, 80);
+}
+
+
+.title-dark {
+    padding-left: 25px;
+    color: rgb(189, 213, 224);
+    font-size: 60px;
+    display: flex;
+}
+
+.subtitle-dark {
+  padding-left: 35px;
+  color: rgb(188, 215, 229);
+  font-size: 35px;
+}
+
+.footer-dark {
+    background-color:rgb(80, 80, 80);
+    margin-top: auto;
+    overflow: hidden;
+    min-height: 100px;
+}
+
+
+.text-box {
+  max-width: 300px;
+  overflow: scroll;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+.text-content{
+  padding-left: 55px;
+}
+
+
+.allign-center {
+    text-align: center;
+}
+
+.mode-button {
+  float: left;
+  color: rgb(140, 182, 204);
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.mode-button-dark {
+  float: left;
+  color: rgb(51, 65, 72);
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.topnav img {
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+
+.topnav-dark img {
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+
+
+ .switch {
+  float: left;
+  position: relative;
+  margin-top: 5px;
+  width: 60px;
+  height: 34px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #476075;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.corner-text {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.margin-left {
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.large-text {
+  font-size: 40px;
+}
+
+.small-text {
+  font-size: 20px;
+}
+
+.min-height {
+  min-height: 100px;
+}
+
+.sidenav {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .topnav {
+    display: none;
+  }
+  .topnav-dark {
+    display: none;
+  }
+  .sidenav {
+    display: flex;
+  }
+}

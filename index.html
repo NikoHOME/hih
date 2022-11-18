@@ -1,36 +1,80 @@
+
+
 <!DOCTYPE html>
 
-<html>
+<html lang="pl">
     <head>
+        <title> Moje Hobby</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="jquery/jquery-1.11.2.min.js"></script>
+        <script src="main.js"></script>
     
     </head>
-    <body>
+    <body class="body edit" onload="onLoad();">
 
-        <nav class="topnav">
-            <a class="active" href="#Home">Home</a>
+        <nav class="topnav edit">
+            <span class="main"> Projekt WAI </span>
+            <img src="img/sun.png" id="modeImg" alt="sun">
+            <label class="switch">
+                <input id="checkBox" type="checkbox" onclick="manageModes();">
+                <span class="slider"></span>
+            </label>
             <a href="gallery.html">Galeria</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+            <a href="recipe.html">Przepisy</a>
+            <a class="active" href="#Home">Front</a>
         </nav>
 
-        <header class="header" id="Gallery">
-            <div>
-                <h1 class="title" > Moje Hobby </h1>
+    
+        <header class="header edit" id="Home">
+            <nav class="sidenav">
+                <span class="main"> Projekt WAI </span>
+                <a href="gallery.html">Galeria</a>
+                <a href="recipe.html">Przepisy</a>
+                <a class="active" href="#Home">Front</a>
+            </nav>
+            <div style="display: flex;">
+                <h1 class="title edit" > Moje Hobby </h1>
             </div>
         </header>
-
-        <section class="content">
-
+        <hr class="solid edit">
+        <section class="content edit">
+            <h1 class="subtitle edit"> Gotowanie </h1>
+            <div class="text-content">
+                <span class="text-box">
+                    Fascynatem gotowania stałem się już od lat dzieciństwa.
+                    Intrygowała mnie dokładność i detale w przygotowaniu
+                    albo podawaniu dań, które tworzyły ogromne różnice.
+                </span>
+                <span class="text-box">
+                    Jak większośc młodych kucharzy moim celem było tworzenie 
+                    rzadko spotykanych dań w jak najlepszy sposób oraz eksperymentowanie 
+                    z ustalonomy w rodzine przepisami. Mimo początkowych niepowodzeń
+                    udało mi się wykształcić podstawowy sens kulinarny, ze względu na różne smaki 
+                    i odeszłem od wyidealizowanych potraw w stronę praktycznej kuchni.
+                </span>
+                <span class="text-box">
+                    Ale, po dłuższej styczności z gotowaniem zaczełem na nie spoglądać z
+                    innej strony. Gotowanie jak i kultura za nią po części kształtuje nas 
+                    oraz powiązuje z rodziną, a nawet przodkami w formie przepisów lub 
+                    domowych mitów. Nasze wybory kulinarne również wpływają na nasze zdrowie, styl 
+                    życia i możliwie charakter. Przez co nie można spoglądać na gotowanie tylko ze 
+                    strony praktycznej, ale i również ze strony sentymantalnej oraz emocjonalnej. 
+                </span>
+            </div>
         </section>
 
-        <footer class="footer">
-            <div>
-                <h1 class="title"> footer </h1>
+        <section class="content edit">
+            
+
+
+        </section>
+        <hr class="solid edit">
+        <footer>
+            <div class="footer edit" style="position: relative;"> 
+                <span class="subtitle edit corner-text">Wiktor Gawroński</span>
             </div>
         </footer>
-
     </body>
 </html>

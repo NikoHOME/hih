@@ -1,0 +1,27 @@
+
+body {
+  display: block;
+  flex-direction: column;
+  background-color:#181a1b;
+  color: #ddd;
+}
+
+
+label {
+  width: 400px;
+  display: block;
+}
+label input {
+  width: 200px;
+  float: right;
+}
+label select {
+  width: 200px;
+  float: right;
+}
+textarea {
+  width: 400px;
+  height: 100px;
+  display: block;
+}
+

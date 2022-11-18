@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Przepisy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/custom-light.css">
+        <script src="jquery/jquery-1.11.2.min.js"></script>
+        <script src="jquery/jquery-ui.js"></script>
+        <script src="main.js"></script>
+        <script>    
+        $( function() {
+            $( "[id^=tabsSec]" ).tabs();
+        } );
+        function initialize()
+        {
+            window.availableTags=[];
+        }
+
+        function addToTags(tag)
+        {
+            window.availableTags.push(tag)
+        };
+        function swapCSS()
+        {
+            var sheets = document.getElementsByTagName('link');
+            if(window.localStorage.isDark=="true") sheets[1].href = "css/custom-dark.css";
+            else sheets[1].href = "css/custom-light.css";
+
+        }
+        </script>
+    </head>
+    <body class="body edit" onload=" onLoad();  swapCSS();">
+
+        <nav class="topnav edit">
+            <span class="main"> Projekt WAI </span>
+            <img src="img/sun.png" id="modeImg" alt="sun">
+            <label class="switch">
+                <input id="checkBox" type="checkbox" onclick="manageModes(); swapCSS();">
+                <span class="slider"></span>
+            </label>
+            <a href="gallery.html">Galeria</a>
+            <a class="active" href="#Home">Przepisy</a>
+            <a href="index.html">Front</a>
+        </nav>
+
+        <header class="header edit" id="Home">
+            <div>
+                <h1 class="title edit" > Kolekcja przepisów </h1>
+            </div>
+        </header>
+
+        <section class="content edit">
+            <p class="margin-left">Wyszukaj po nazwie</p>
+            <form action="find.php" method="get" class="ui-widget margin-left">
+                <label for="tags"> Nazwa : </label> 
+                <input id="tags" name="search" type="text">
+                <input type="submit" value="Szukaj" ><br>
+            </form>
+        </section>
+
+        <section class="content edit">
+            <div id="result" class="margin-left">
+                Ilość dodanych przepisów : 0
+            </div>
+        </section>
+        
+
+        <footer class="footer edit">
+            <div class="footer edit" style="position: relative;"> 
+                <span class="subtitle edit corner-text">Wiktor Gawroński</span>
+            </div>
+        </footer>
+
+    </body>
+</html>
