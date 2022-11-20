@@ -1,18 +1,16 @@
-body {
+
+.body {
   display: flex;
   flex-direction: column;
-  background-color: rgb(227, 245, 249);
 }
 
-
 hr.solid {
-  border-top: 3px solid rgb(117, 128, 128);
   margin:0;
   width: 100%;
 }
 
+
 .topnav {
-  background-color: white;
   overflow: hidden;
   position: fixed; 
   background-position: 30px;
@@ -24,7 +22,6 @@ hr.solid {
 
 .topnav a {
   float: right;
-  color: rgb(55, 71, 79);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -33,147 +30,65 @@ hr.solid {
 
 .topnav span {
   float: left;
-  color: rgb(55, 71, 79);
   font-weight: bold;
   text-align: center;
   padding: 10px 14px;
   text-decoration: none;
   font-size: 21px;
 }
-
+/*
 .topnav a:hover {
-  background-color: rgb(57, 54, 54);
-  color: white;
+
 }
 
 .topnav a.active {
-  background-color: slategray;
-  color: white;
+
+}
+*/
+.topnav img {
+  width: 48px;
+  height: 48px;
+  float: left;
 }
 
-
-.header {
-    background-color: lightgrey;    
+.header { 
     padding-top: 25px;
-    padding-left: 0;
     width: 100%;
     overflow: hidden;
     display: flex;
 }
-
+/*
 .content{
-  color: rgb(55, 71, 79);
-  background-color: rgb(189, 181, 181);
-}
 
+}
+*/
 
 .title {
     padding-left: 25px;
-    color: rgb(55, 71, 79);
     font-size: 60px;
     display: flex;
 }
 
 .subtitle {
   padding-left: 35px;
-  color: rgb(55, 71, 79);
+  margin: 0;
   font-size: 35px;
+  padding-top: 20px;
+  margin: 0;
 }
 
-.footer {
-    background-color:lightgrey;
-    margin-top: auto;
-    overflow: hidden;
-    min-height: 100px;
-}
-
-
-.body-dark {
-  display: flex;
-  flex-direction: column;
-  background-color: #181a1b;
-}
-
-hr.solid-dark {
-  border-top: 3px solid rgb(38, 40, 40);
-  margin:0;
-  width: 100%;
+.footer{
+    background-color:rgb(80, 80, 80);
 }
 
 
-.topnav-dark {
-  background-color: black;
-  overflow: hidden;
-  position: fixed; 
-  background-position: 30px;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  z-index: 1000; 
-}
-
-.topnav-dark a {
-  float: right;
-  color: rgb(150, 190, 210);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav-dark span {
+.mode-button {
   float: left;
-  color: rgb(140, 182, 204);
   font-weight: bold;
   text-align: center;
   padding: 10px 14px;
   text-decoration: none;
   font-size: 21px;
-}
-
-.topnav-dark a:hover {
-  background-color: rgb(100, 154, 154);
-  color: black;
-}
-
-.topnav-dark a.active {
-  background-color: rgb(98, 111, 124);
-  color: black;
-}
-
-
-.header-dark {
-    background-color: rgb(62, 62, 62);    
-    padding-top: 25px;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-}
-
-.content-dark{
-  color: rgb(195, 215, 225);
-  background-color: rgb(85, 80, 80);
-}
-
-
-.title-dark {
-    padding-left: 25px;
-    color: rgb(189, 213, 224);
-    font-size: 60px;
-    display: flex;
-}
-
-.subtitle-dark {
-  padding-left: 35px;
-  color: rgb(188, 215, 229);
-  font-size: 35px;
-}
-
-.footer-dark {
-    background-color:rgb(80, 80, 80);
-    margin-top: auto;
-    overflow: hidden;
-    min-height: 100px;
 }
 
 
@@ -195,37 +110,7 @@ hr.solid-dark {
     text-align: center;
 }
 
-.mode-button {
-  float: left;
-  color: rgb(140, 182, 204);
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 14px;
-  text-decoration: none;
-  font-size: 21px;
-}
 
-.mode-button-dark {
-  float: left;
-  color: rgb(51, 65, 72);
-  font-weight: bold;
-  text-align: center;
-  padding: 10px 14px;
-  text-decoration: none;
-  font-size: 21px;
-}
-
-.topnav img {
-  width: 48px;
-  height: 48px;
-  float: left;
-}
-
-.topnav-dark img {
-  width: 48px;
-  height: 48px;
-  float: left;
-}
 
 
  .switch {
@@ -303,6 +188,15 @@ input:checked + .slider:before {
   display: none;
 }
 
+.left-div {
+  display: flex;
+  flex: left;
+}
+
+.main {
+  margin-left: 100px;
+}
+
 @media only screen and (max-width: 600px) {
   .topnav {
     display: none;
@@ -312,5 +206,8 @@ input:checked + .slider:before {
   }
   .sidenav {
     display: flex;
+    flex: left;
+    height: 100%; 
+    width: 100px;
   }
 }

@@ -8,13 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/custom-light.css" id="jqrLight">
+        <link rel="stylesheet" href="css/style-light.css" id="cssLight">
         <script src="jquery/jquery-1.11.2.min.js"></script>
         <script src="main.js"></script>
-    
     </head>
-    <body class="body edit" onload="onLoad();">
+    <body class="body body-theme" onload="onLoad();">
 
-        <nav class="topnav edit">
+        <nav class="topnav topnav-theme">
             <span class="main"> Projekt WAI </span>
             <img src="img/sun.png" id="modeImg" alt="sun">
             <label class="switch">
@@ -26,21 +27,23 @@
             <a class="active" href="#Home">Front</a>
         </nav>
 
+        <nav class="sidenav">
+            <span class="main"> Projekt HIH </span>
+            <a href="gallery.html">Galeria</a>
+            <a href="recipe.html">Przepisy</a>
+            <a class="active" href="#Home">Front</a>
+        </nav>
+        <div class="main">
     
-        <header class="header edit" id="Home">
-            <nav class="sidenav">
-                <span class="main"> Projekt WAI </span>
-                <a href="gallery.html">Galeria</a>
-                <a href="recipe.html">Przepisy</a>
-                <a class="active" href="#Home">Front</a>
-            </nav>
-            <div style="display: flex;">
-                <h1 class="title edit" > Moje Hobby </h1>
+        <header class="header header-theme" id="Home">
+            
+            <div>
+                <h1 class="title title-theme" > Moje Hobby </h1>
             </div>
         </header>
-        <hr class="solid edit">
-        <section class="content edit">
-            <h1 class="subtitle edit"> Gotowanie </h1>
+        <hr class="solid solid-theme">
+        <section class="content content-theme">
+            <h1 class="subtitle subtitle-theme"> Gotowanie </h1>
             <div class="text-content">
                 <span class="text-box">
                     Fascynatem gotowania stałem się już od lat dzieciństwa.
@@ -65,15 +68,16 @@
             </div>
         </section>
 
-        <section class="content edit">
+        <section class="content content-theme">
             
 
 
         </section>
-        <hr class="solid edit">
+        </div>
+        <hr class="solid solid-theme">
         <footer>
-            <div class="footer edit" style="position: relative;"> 
-                <span class="subtitle edit corner-text">Wiktor Gawroński</span>
+            <div class="footer footer-theme" style="position: relative;"> 
+                <span class="subtitle subtitle-theme corner-text">Wiktor Gawroński</span>
             </div>
         </footer>
     </body>
