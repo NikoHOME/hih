@@ -59,5 +59,28 @@ hr.solid-theme {
   color: rgb(51, 65, 72);
 }
 
+.side-nav-theme {
+  background-color: aliceblue;
+}
 
+.a-nav-theme {
+  color:  rgb(150, 190, 210);
+}
+
+.span-nav-theme {
+  color: rgb(140, 182, 204);
+  background-color: black;
+  width: 122px;
+  margin: 0;
+}
+
+.a-nav-theme:hover {
+  background-color: rgb(100, 154, 154);
+  color: rgb(0, 0, 0);
+}
+
+.a-nav-theme.active {
+  background-color: rgb(98, 111, 124);
+  color: white;
+}
 

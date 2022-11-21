@@ -2,14 +2,15 @@
 <!DOCTYPE html>
 <html lang="pl">
     <head>
-        <title>Przepisy</title>
+        <title> Galeria</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/custom-light.css">
+        <link rel="stylesheet" href="css/custom-light.css" id="jqrLight">
+        <link rel="stylesheet" href="css/style-light.css" id="cssLight">
         <script src="jquery/jquery-1.11.2.min.js"></script>
-        <script src="jquery/jquery-ui.js"></script>
         <script src="main.js"></script>
-        <script>    
+        <script>
         $( function() {
             $( "[id^=tabsSec]" ).tabs();
         } );
@@ -22,36 +23,61 @@
         {
             window.availableTags.push(tag)
         };
-        function swapCSS()
-        {
-            var sheets = document.getElementsByTagName('link');
-            if(window.localStorage.isDark=="true") sheets[1].href = "css/custom-dark.css";
-            else sheets[1].href = "css/custom-light.css";
-
-        }
         </script>
     </head>
-    <body class="body edit" onload=" onLoad();  swapCSS();">
+    <body class="body body-theme">
 
-        <nav class="topnav edit">
-            <span class="main"> Projekt WAI </span>
-            <img src="img/sun.png" id="modeImg" alt="sun">
+        <nav class="topnav topnav-theme">
+            <span class="span-nav"> Projekt HIH </span>
+            <img src="img/sun.png" id="modeImg1" alt="sun">
             <label class="switch">
-                <input id="checkBox" type="checkbox" onclick="manageModes(); swapCSS();">
+                <input id="checkBox1" type="checkbox" onclick="manageModes();">
                 <span class="slider"></span>
             </label>
-            <a href="gallery.html">Galeria</a>
-            <a class="active" href="#Home">Przepisy</a>
-            <a href="index.html">Front</a>
-        </nav>
 
-        <header class="header edit" id="Home">
+            <a class="a-nav a-nav-theme" href="gallery.html">Galeria</a>
+            <a class="a-nav a-nav-theme active" href="#Home">Przepisy</a>
+            <a class="a-nav a-nav-theme " href="index.html">Front</a>
+            <div style="padding-left: 0;" class="a-nav"> </div>
+            <div class="dropdown">
+                <div class="dropbtn">Influencers</div>
+                <div class="dropdown-content">
+                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
+                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
+                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                </div>
+            </div>
+
+        </nav>
+        <nav class="sidenav sidenav-theme">
+            <span class="span-nav span-nav-theme"> Projekt HIH </span>
+            <img src="img/sun.png" id="modeImg2" alt="sun">
+            <label class="switch">
+                <input id="checkBox2" type="checkbox" onclick="manageModes();">
+                <span class="slider"></span>
+            </label>         
+            <a class="a-nav-side a-nav-theme " href="index.html">Front</a>
+            <a class="a-nav-side a-nav-theme active" href="#Home">Przepisy</a>
+            <a class="a-nav-side a-nav-theme" href="gallery.html">Galeria</a>
+            <div class="dropdown">
+                <div class="dropbtn-side">Influencers</div>
+                <div class="dropdown-content">
+                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
+                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
+                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                </div>
+            </div>   
+
+        </nav>
+        <div class="main">
+
+        <header class="header header-theme" id="Home">
             <div>
-                <h1 class="title edit" > Kolekcja przepisów </h1>
+                <h1 class="title title-theme" > Kolekcja przepisów </h1>
             </div>
         </header>
 
-        <section class="content edit">
+        <section class="content content-theme">
             <p class="margin-left">Wyszukaj po nazwie</p>
             <form action="find.php" method="get" class="ui-widget margin-left">
                 <label for="tags"> Nazwa : </label> 
@@ -60,18 +86,18 @@
             </form>
         </section>
 
-        <section class="content edit">
+        <section class="content content-theme">
             <div id="result" class="margin-left">
                 Ilość dodanych przepisów : 0
             </div>
         </section>
         
 
-        <footer class="footer edit">
-            <div class="footer edit" style="position: relative;"> 
-                <span class="subtitle edit corner-text">Wiktor Gawroński</span>
+        <footer class="footer footer-theme">
+            <div class="footer footer-theme" style="position: relative;"> 
+                <span class="subtitle subtitle-theme corner-text">Wiktor Gawroński</span>
             </div>
         </footer>
-
+        </div>
     </body>
 </html>

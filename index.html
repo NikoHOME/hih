@@ -13,25 +13,49 @@
         <script src="jquery/jquery-1.11.2.min.js"></script>
         <script src="main.js"></script>
     </head>
-    <body class="body body-theme" onload="onLoad();">
+    <body class="body body-theme">
 
         <nav class="topnav topnav-theme">
-            <span class="main"> Projekt WAI </span>
-            <img src="img/sun.png" id="modeImg" alt="sun">
+            <span class="span-nav"> Projekt HIH </span>
+            <img src="img/sun.png" id="modeImg1" alt="sun">
             <label class="switch">
-                <input id="checkBox" type="checkbox" onclick="manageModes();">
+                <input id="checkBox1" type="checkbox" onclick="manageModes();">
                 <span class="slider"></span>
             </label>
-            <a href="gallery.html">Galeria</a>
-            <a href="recipe.html">Przepisy</a>
-            <a class="active" href="#Home">Front</a>
-        </nav>
 
-        <nav class="sidenav">
-            <span class="main"> Projekt HIH </span>
-            <a href="gallery.html">Galeria</a>
-            <a href="recipe.html">Przepisy</a>
-            <a class="active" href="#Home">Front</a>
+            <a class="a-nav a-nav-theme" href="gallery.html">Galeria</a>
+            <a class="a-nav a-nav-theme" href="recipe.html">Przepisy</a>
+            <a class="a-nav a-nav-theme active" href="#Home">Front</a>
+            <div style="padding-left: 0;" class="a-nav"> </div>
+            <div class="dropdown">
+                <div class="dropbtn">Influencers</div>
+                <div class="dropdown-content">
+                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
+                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
+                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                </div>
+            </div>
+
+        </nav>
+        <nav class="sidenav sidenav-theme">
+            <span class="span-nav span-nav-theme"> Projekt HIH </span>
+            <img src="img/sun.png" id="modeImg2" alt="sun">
+            <label class="switch">
+                <input id="checkBox2" type="checkbox" onclick="manageModes();">
+                <span class="slider"></span>
+            </label>         
+            <a class="a-nav-side a-nav-theme active" href="#Home">Front</a>
+            <a class="a-nav-side a-nav-theme" href="recipe.html">Przepisy</a>
+            <a class="a-nav-side a-nav-theme" href="gallery.html">Galeria</a>
+            <div class="dropdown">
+                <div class="dropbtn-side">Influencers</div>
+                <div class="dropdown-content">
+                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
+                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
+                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                </div>
+            </div>   
+
         </nav>
         <div class="main">
     
@@ -73,12 +97,12 @@
 
 
         </section>
-        </div>
         <hr class="solid solid-theme">
         <footer>
             <div class="footer footer-theme" style="position: relative;"> 
                 <span class="subtitle subtitle-theme corner-text">Wiktor Gawroński</span>
             </div>
         </footer>
+        </div>
     </body>
 </html>

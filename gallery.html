@@ -4,81 +4,111 @@
 
 <html lang="pl">
     <head>
-        <title> Galeria Dań</title>
+        <title> Galeria</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/custom-light.css" id="jqrLight">
+        <link rel="stylesheet" href="css/style-light.css" id="cssLight">
         <script src="jquery/jquery-1.11.2.min.js"></script>
         <script src="main.js"></script>
     </head>
-    <body class="body edit" onload="onLoad();">
+    <body class="body body-theme">
 
-        <nav class="topnav edit">
-            <span class="main"> Projekt WAI </span>
-            <img src="img/sun.png" id="modeImg" alt="sun">
+        <nav class="topnav topnav-theme">
+            <span class="span-nav"> Projekt HIH </span>
+            <img src="img/sun.png" id="modeImg1" alt="sun">
             <label class="switch">
-                <input id="checkBox" type="checkbox" onclick="manageModes();">
+                <input id="checkBox1" type="checkbox" onclick="manageModes();">
                 <span class="slider"></span>
             </label>
-            <a class="active" href="#Home">Galeria</a>
-            <a href="recipe.html">Przepisy</a>
-            <a href="index.html">Front</a>
-        </nav>
-        <header class="header edit" id="Home">
-            <div>
-                <h1 class="title edit" > Kolekcja dań pokazowych </h1>
+
+            <a class="a-nav a-nav-theme active" href="#Home">Galeria</a>
+            <a class="a-nav a-nav-theme" href="recipe.html">Przepisy</a>
+            <a class="a-nav a-nav-theme " href="index.html">Front</a>
+            <div style="padding-left: 0;" class="a-nav"> </div>
+            <div class="dropdown">
+                <div class="dropbtn">Influencers</div>
+                <div class="dropdown-content">
+                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
+                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
+                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                </div>
             </div>
-        </header>
-        <hr class="solid edit">
-        <section class="content edit">
-            <ul style="list-style-type: square;">
-                <li class="margin-left large-text"> 
-                    <span>Mięsa długopieczone</span>
-                    <div class="min-height">
-                        <span class="small-text">
-                            Przepisy na mięso pieczone dzięki swojej prostocie nie są wrażliwe na modyfikacji dzięki czemu łatwo jest dodać swój originalny dodatek.
-                        </span>
-                    </div>
-                </li>
-                <li class="margin-left large-text">
-                    <span>Stek strogonof na patelni</span>
-                    <div class="min-height">
-                        <span class="small-text">
-                            Mięso z patelni to jedno z podstawowych części obiadu ale niewiele osób potrafi wykorzystać soki mięsne i aromaty wydobywające się podczas smażenia, 
-                            które tworzą idelna baze do sosu.
-                        </span>
-                    </div>
-                </li>                    
-                <li class="margin-left large-text">
-                    <span>Crossaint</span>
-                    <div class="min-height">
-                        <span class="small-text">
-                            Crossainty oraz inne rogale są zadziwająco przydatne w codziennej kuchni oraz wyglądają nieziemsko przy dobrym wykonaniu.  
-                        </span>
-                    </div>
-                </li>  
-                <li class="margin-left large-text">
-                    <span>Mule na winie</span>
-                    <div class="min-height">
-                        <span class="small-text">
-                            Mule często kojarzą się z drogimi daniami z restauracji, jednakżke ich przygotowanie nie jest, aż tak skomplikowane ale robi wrażenie.
-                        </span>
-                    </div>
-                </li>  
-            </ul>
-        </section>
-        
-        <section class="content edit">
 
-        
+        </nav>
+        <nav class="sidenav sidenav-theme">
+            <span class="span-nav span-nav-theme"> Projekt HIH </span>
+            <img src="img/sun.png" id="modeImg2" alt="sun">
+            <label class="switch">
+                <input id="checkBox2" type="checkbox" onclick="manageModes();">
+                <span class="slider"></span>
+            </label>         
+            <a class="a-nav-side a-nav-theme " href="index.html">Front</a>
+            <a class="a-nav-side a-nav-theme" href="recipe.html">Przepisy</a>
+            <a class="a-nav-side a-nav-theme active" href="#Home">Galeria</a>
+            <div class="dropdown">
+                <div class="dropbtn-side">Influencers</div>
+                <div class="dropdown-content">
+                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
+                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
+                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                </div>
+            </div>   
 
-        </section>
-        <hr class="solid edit">
+        </nav>
+        <div class="main">
+    
+            <header class="header header-theme" id="Home">
+                <div>
+                    <h1 class="title title-theme" > Kolekcja dań pokazowych </h1>
+                </div>
+            </header>
+            <hr class="solid solid-theme">
+            <section class="content content-theme">
+                <ul class="ul-style">
+                    <li class="margin-left large-text"> 
+                        <span>Mięsa długopieczone</span>
+                        <div class="min-height">
+                            <span class="small-text">
+                                Przepisy na mięso pieczone dzięki swojej prostocie nie są wrażliwe na modyfikacji dzięki czemu łatwo jest dodać swój originalny dodatek.
+                            </span>
+                        </div>
+                    </li>
+                    <li class="margin-left large-text">
+                        <span>Stek strogonof na patelni</span>
+                        <div class="min-height">
+                            <span class="small-text">
+                                Mięso z patelni to jedno z podstawowych części obiadu ale niewiele osób potrafi wykorzystać soki mięsne i aromaty wydobywające się podczas smażenia, 
+                                które tworzą idelna baze do sosu.
+                            </span>
+                        </div>
+                    </li>                    
+                    <li class="margin-left large-text">
+                        <span>Crossaint</span>
+                        <div class="min-height">
+                            <span class="small-text">
+                                Crossainty oraz inne rogale są zadziwająco przydatne w codziennej kuchni oraz wyglądają nieziemsko przy dobrym wykonaniu.  
+                            </span>
+                        </div>
+                    </li>  
+                    <li class="margin-left large-text">
+                        <span>Mule na winie</span>
+                        <div class="min-height">
+                            <span class="small-text">
+                                Mule często kojarzą się z drogimi daniami z restauracji, jednakżke ich przygotowanie nie jest, aż tak skomplikowane ale robi wrażenie.
+                            </span>
+                        </div>
+                    </li>  
+                </ul>
+            </section>
+
+        <hr class="solid solid-theme">
         <footer>
-            <div class="footer edit" style="position: relative;"> 
-                <span class="subtitle edit corner-text">Wiktor Gawroński</span>
+            <div class="footer footer-theme" style="position: relative;"> 
+                <span class="subtitle subtitle-theme corner-text">Wiktor Gawroński</span>
             </div>
         </footer>
-
+        </div>
     </body>
 </html>

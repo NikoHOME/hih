@@ -2,6 +2,7 @@
 .body {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 hr.solid {
@@ -11,7 +12,6 @@ hr.solid {
 
 
 .topnav {
-  overflow: hidden;
   position: fixed; 
   background-position: 30px;
   top: 0; 
@@ -20,7 +20,7 @@ hr.solid {
   z-index: 1000; 
 }
 
-.topnav a {
+.a-nav {
   float: right;
   text-align: center;
   padding: 14px 16px;
@@ -28,7 +28,16 @@ hr.solid {
   font-size: 17px;
 }
 
-.topnav span {
+.a-nav-side {
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
+  width: 122px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.span-nav {
   float: left;
   font-weight: bold;
   text-align: center;
@@ -36,6 +45,10 @@ hr.solid {
   text-decoration: none;
   font-size: 21px;
 }
+
+
+
+
 /*
 .topnav a:hover {
 
@@ -51,6 +64,13 @@ hr.solid {
   float: left;
 }
 
+.sidenav img {
+  width: 48px;
+  padding-left: 12px;
+  height: 48px;
+  float: left;
+}
+
 .header { 
     padding-top: 25px;
     width: 100%;
@@ -62,6 +82,74 @@ hr.solid {
 
 }
 */
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #2a6274;
+  color: white;
+  padding: 14px 16px;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+}
+
+.dropbtn-side {
+  background-color: #2a6274;
+  color: white;
+  padding: 14px 14px;
+  text-align: center;
+  width: 122px;
+  left: 0;
+  font-size: 17px;
+  text-decoration: none;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: block;
+  float: right;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+
+
+
+
 
 .title {
     padding-left: 25px;
@@ -79,6 +167,10 @@ hr.solid {
 
 .footer{
     background-color:rgb(80, 80, 80);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    float: right;
 }
 
 
@@ -110,7 +202,10 @@ hr.solid {
     text-align: center;
 }
 
-
+.ul-style {
+  list-style-type: square;
+  margin: 0;
+}
 
 
  .switch {
@@ -169,7 +264,7 @@ input:checked + .slider:before {
 
 .margin-left {
   margin-left: 25px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .large-text {
@@ -190,24 +285,24 @@ input:checked + .slider:before {
 
 .left-div {
   display: flex;
-  flex: left;
+  float: left;
 }
 
 .main {
-  margin-left: 100px;
+  margin-left: 150px;
 }
 
 @media only screen and (max-width: 600px) {
   .topnav {
     display: none;
   }
-  .topnav-dark {
-    display: none;
-  }
   .sidenav {
-    display: flex;
-    flex: left;
+    display: inline;
     height: 100%; 
-    width: 100px;
+    left: 0;
+    width: 150px;
+    position: fixed;
   }
 }
+
+

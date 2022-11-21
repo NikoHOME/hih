@@ -2,15 +2,15 @@
 
 function manageModes()
 {
-    if(window.localStorage.isDark=="true")
+    if(window.sessionStorage.isDark=="true")
     {
         swapCSS(true);
-        window.localStorage.isDark="false";
+        window.sessionStorage.isDark="false";
     }
     else
     {
         swapCSS(false);
-        window.localStorage.isDark="true";
+        window.sessionStorage.isDark="true";
     }
 
 }
@@ -18,29 +18,37 @@ function manageModes()
 
 
 
-function onLoad()
-{
-    if(window.localStorage.isDark=="true") 
+
+
+$(window).on('load',function() {
+
+    
+    if(window.sessionStorage.isDark=="true") 
     {
-        if( !($( "#checkBox" ).is(":checked")))  
+        if( !($( "#checkBox1" ).is(":checked")) || !($( "#checkBox2" ).is(":checked")))  
         {
-            document.getElementById('checkBox').click();
-            window.localStorage.isDark="true";
+            $("#checkBox1").prop('checked', 'checked');
+            $("#checkBox2").prop('checked', 'checked');
+            window.sessionStorage.isDark="true";
             swapCSS(false);
 
+        }
+        else
+        {
+            swapCSS(false);
         }
     }
     else
     {
-        if( ($( "#checkBox" ).is(":checked"))) 
+        if( ($( "#checkBox1" ).is(":checked")) || ($( "#checkBox2" ).is(":checked"))) 
         {
-            document.getElementById('checkBox').click();
-            window.localStorage.isDark="false";
+            $("#checkBox1").removeAttr('checked');
+            $("#checkBox2").removeAttr('checked');
+            window.sessionStorage.isDark="false";
             swapCSS(true);
         }
     }
-
-}
+});
 
 
 function swapCSS(cond)
@@ -53,7 +61,10 @@ function swapCSS(cond)
         cssStyle.attr('href', "css/style-light.css");
         jqrStyle.attr('id', "jqrDark");
         cssStyle.attr('id', "cssDark");
-        $('#modeImg').attr('src', 'img/sun.png');
+        $('#modeImg1').attr('src', 'img/sun.png');
+        $('#modeImg2').attr('src', 'img/sun.png');
+        $("#checkBox1").removeAttr('checked');
+        $("#checkBox2").removeAttr('checked');
     }
     else 
     {
@@ -61,6 +72,9 @@ function swapCSS(cond)
         cssStyle.attr('href', "css/style-dark.css");
         jqrStyle.attr('id', "jqrLight");
         cssStyle.attr('id', "cssLight");
-        $('#modeImg').attr('src', 'img/moon.png');
+        $('#modeImg1').attr('src', 'img/moon.png');
+        $('#modeImg2').attr('src', 'img/moon.png');
+        $("#checkBox1").prop('checked', 'checked');
+        $("#checkBox2").prop('checked', 'checked');
     }
 }
