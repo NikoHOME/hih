@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipeList>
+
+    <recipeSection type="breakfast">
+        <recipe difficulty="medium" time=15 isVegan="false" isVege="true" sizemin=1 sizemax=2>
+            <name>Japoński zawijany omlet</name>
+            <description>
+                Oryginalny japonski omlet zawijany jest smazony na podluznej, prostokatnej patelni i posiada w swoim skladzie m.in. sos sojowy i mirin - japonskie wino ryzowe, które jest popularna przyprawa do gotowania.  Omlety te czesto nie posiadaja zadnych dodatków, choc istnieja jednak omlety z cebula, marchewka, dymka lub wodorostami. Mój omlet posiada skladniki, które zawsze mamy w  domu, a oprócz typowo japonskiego sposobu na  smazenie zastosowalam arkusz nori, ale i bez niego przepis jest równie smaczny. Co do innych warzyw fantazja nie zna granic, wiec praktycznie mozemy  za kazdym razem wyczarowac inne, bardzo szybkie  danie.
+            </description>
+            <image>omlet.jpg</image>
+            <link>https://smaker.pl/przepisy-dania-glowne/przepis-japonski-zawijany-omlet,173106,konhambos.html</link>
+            <ingredients>
+                <ingredient n="1">
+                    5 jajek
+                </ingredient>
+                <ingredient n="2">
+                    2 łyżki mleka
+                </ingredient>
+                <ingredient n="3">
+                    2 dymki lub szalotki
+                </ingredient>
+                <ingredient n="4">
+                    1 marchewka
+                </ingredient>
+                <ingredient n="5">
+                    1 arkusz nori (wodorostów) opcjonalnie
+                </ingredient>
+                <ingredient n="6">
+                    olej
+                </ingredient>
+                <ingredient n="7">
+                    sól, pieprz
+                </ingredient>
+            </ingredients>
+            <steps>
+                <step n=1>
+                    Pokroic marchewke w bardzo drobna kostke a dymke na drobne pierscienie.
+                </step>
+                <step n=2>
+                    Wymieszac jajka z mlekiem i przyprawami i przecedzic przez sitko. Jednolita mase jajeczna wymieszac z marchewka i dymka.
+                </step>
+                <step n=3>
+                    Umiescic okolo 1/3 masy na nagrzanej i natluszczonej, ale niezbyt goracej patelni i ulozyc na niej arkusz wodorostów.
+                </step>
+                <step n=4>
+                    Gdy masa sie zetnie, delikatnie ja zrolowac, przesunac do konca patelni i wlac nastepna czesc masy na zwolnione miejsce uwazajac, aby masa znalazla sie równiez pod zwinietym jajkiem.
+                </step>
+                <step n=5>
+                    Gdy nowa warstwa sie zetnie, ponownie ja zrolowac a na wolne miejsce wlac nastepna czesc masy i powtarzac wszystko do momentu, az masa jajeczna zostanie zuzyta.
+                </step>
+                <step n=6>
+                    Gdy omlet jest gotowy, wyjac go z patelni, chwile ostudzic i przeciac na waskie kawalki.
+                </step>
+            </steps>
+
+        </recipe>
+
+<recipe difficulty="easy" time=25 isVegan="false" isVege="true" sizemin=1 sizemax=2>
+            <name>Pannkakor, szwedzkie naleśniki</name>
+            <description>
+                „Pannkaka” w języku szwedzkim oznacza naleśnika. W Szwecji naleśniki smaży się na patelni lub piecze w piekarniku (pieczone naleśniki są popularne także w innych krajach skandynawskich). Naleśniki mogą być podawane ze słodkimi lub wytrawnymi dodatkami
+            </description>
+            <image>pancake.jpg</image>
+            <link>https://filozofiasmaku.pl/2014/05/15/pannkakor-szwedzkie-nalesniki/</link>
+            <ingredients>
+                <ingredient n="1">
+                    1 szklanka mąki
+                </ingredient>
+                <ingredient n="2">
+                    szczypta soli
+                </ingredient>
+                <ingredient n="3">
+                    2 szklanki mleka
+                </ingredient>
+                <ingredient n="4">
+                    3 jajka
+                </ingredient>
+                <ingredient n="5">
+                    2 łyżki stopionego masła
+                </ingredient>
+            </ingredients>
+            <steps>
+                <step n=1>
+                    Mąkę przesiewamy do miski, dodajemy szczyptę soli, mleko, jajka i ostudzone stopione masło.
+                </step>
+                <step n=2>
+                    ałość mieszamy przy pomocy miksera lub ręcznej trzepaczki (do połączenia składników).
+                </step>
+                <step n=3>
+                    Odstawiamy na 15-30 minut.
+                </step>
+                <step n=4>
+                    Na patelni do naleśników topimy niewielką ilość masła (lub używamy oleju), przy pomocy chochelki wylewamy porcje ciasta, rozprowadzamy po dnie patelni. Smażymy z obu stron, aż ładnie się zrumienią.
+                </step>
+                <step n=5>
+                    Należy uważać przy odwracaniu naleśników na drugą stronę, ciasto będzie cienkie i delikatne.
+                </step>
+                <step n=6>
+                    Pannkakor podajemy z bitą śmietaną, dżemem (u mnie dżem malinowy) i owocami. 
+                </step>
+            </steps>
+            <nutrition>
+                <calories>66</calories>
+                <carbs>8g</carbs>
+                <fat>3g</fat>
+                <protein>3g</protein>
+            </nutrition>
+        </recipe>
+    </recipeSection>
+
+
+</recipeList>
