@@ -2,7 +2,7 @@
 <recipeList>
 
     <recipeSection type="breakfast">
-        <recipe difficulty="medium" time=15 isVegan="false" isVege="true" sizemin=1 sizemax=2>
+        <recipe difficulty="medium" time="15" isVegan="false" isVege="true" sizemin="1" sizemax="2">
             <name>Japoński zawijany omlet</name>
             <description>
                 Oryginalny japonski omlet zawijany jest smazony na podluznej, prostokatnej patelni i posiada w swoim skladzie m.in. sos sojowy i mirin - japonskie wino ryzowe, które jest popularna przyprawa do gotowania.  Omlety te czesto nie posiadaja zadnych dodatków, choc istnieja jednak omlety z cebula, marchewka, dymka lub wodorostami. Mój omlet posiada skladniki, które zawsze mamy w  domu, a oprócz typowo japonskiego sposobu na  smazenie zastosowalam arkusz nori, ale i bez niego przepis jest równie smaczny. Co do innych warzyw fantazja nie zna granic, wiec praktycznie mozemy  za kazdym razem wyczarowac inne, bardzo szybkie  danie.
@@ -33,29 +33,29 @@
                 </ingredient>
             </ingredients>
             <steps>
-                <step n=1>
+                <step n="1">
                     Pokroic marchewke w bardzo drobna kostke a dymke na drobne pierscienie.
                 </step>
-                <step n=2>
+                <step n="2">
                     Wymieszac jajka z mlekiem i przyprawami i przecedzic przez sitko. Jednolita mase jajeczna wymieszac z marchewka i dymka.
                 </step>
-                <step n=3>
+                <step n="3">
                     Umiescic okolo 1/3 masy na nagrzanej i natluszczonej, ale niezbyt goracej patelni i ulozyc na niej arkusz wodorostów.
                 </step>
-                <step n=4>
+                <step n="4">
                     Gdy masa sie zetnie, delikatnie ja zrolowac, przesunac do konca patelni i wlac nastepna czesc masy na zwolnione miejsce uwazajac, aby masa znalazla sie równiez pod zwinietym jajkiem.
                 </step>
-                <step n=5>
+                <step n="5">
                     Gdy nowa warstwa sie zetnie, ponownie ja zrolowac a na wolne miejsce wlac nastepna czesc masy i powtarzac wszystko do momentu, az masa jajeczna zostanie zuzyta.
                 </step>
-                <step n=6>
+                <step n="6">
                     Gdy omlet jest gotowy, wyjac go z patelni, chwile ostudzic i przeciac na waskie kawalki.
                 </step>
             </steps>
 
         </recipe>
 
-<recipe difficulty="easy" time=25 isVegan="false" isVege="true" sizemin=1 sizemax=2>
+    <recipe difficulty="easy" time="25" isVegan="false" isVege="true" sizemin="1" sizemax="2">
             <name>Pannkakor, szwedzkie naleśniki</name>
             <description>
                 „Pannkaka” w języku szwedzkim oznacza naleśnika. W Szwecji naleśniki smaży się na patelni lub piecze w piekarniku (pieczone naleśniki są popularne także w innych krajach skandynawskich). Naleśniki mogą być podawane ze słodkimi lub wytrawnymi dodatkami
@@ -80,22 +80,22 @@
                 </ingredient>
             </ingredients>
             <steps>
-                <step n=1>
+                <step n="1">
                     Mąkę przesiewamy do miski, dodajemy szczyptę soli, mleko, jajka i ostudzone stopione masło.
                 </step>
-                <step n=2>
+                <step n="2">
                     ałość mieszamy przy pomocy miksera lub ręcznej trzepaczki (do połączenia składników).
                 </step>
-                <step n=3>
+                <step n="3">
                     Odstawiamy na 15-30 minut.
                 </step>
-                <step n=4>
+                <step n="4">
                     Na patelni do naleśników topimy niewielką ilość masła (lub używamy oleju), przy pomocy chochelki wylewamy porcje ciasta, rozprowadzamy po dnie patelni. Smażymy z obu stron, aż ładnie się zrumienią.
                 </step>
-                <step n=5>
+                <step n="5">
                     Należy uważać przy odwracaniu naleśników na drugą stronę, ciasto będzie cienkie i delikatne.
                 </step>
-                <step n=6>
+                <step n="6">
                     Pannkakor podajemy z bitą śmietaną, dżemem (u mnie dżem malinowy) i owocami. 
                 </step>
             </steps>
@@ -107,6 +107,98 @@
             </nutrition>
         </recipe>
     </recipeSection>
+    <recipeSection type="dinner">
+        <recipe difficulty="medium" time="180" isVegan="false" isVege="false" sizemin="6" sizemax="8">
+            <name>Bolognese Tagliatelle</name>
+            <description>
+                Tagliatelle alla bolognese (tagliatelle z sosem bolognese) są pierwszym daniem kuchni włoskiej a właściwie kuchni regionu Emilia-Romagna, ze starożytnymi i arystokratycznymi korzeniami. Często są mylnie nazywane spaghetti alla bolognese.
+            </description>
+            <image>bologne.jpg</image>
+            <link>https://www.allrecipes.com/recipe/280810/bolognese-tagliatelle/</link>
+            <ingredients>
+                <ingredient n="1">
+                    500 g Makaronu Tagliatelle
+                </ingredient>
+                <ingredient n="2">
+                    500 g Mielonej wołowiny
+                </ingredient>
+                <ingredient n="3">
+                    250 g Mielonej wieprzowiny
+                </ingredient>
+                <ingredient n="4">
+                    250 g Przeciera pomidorowego (passata)
+                </ingredient>
+                <ingredient n="5">
+                    50 g Selera
+                </ingredient>
+                <ingredient n="6">
+                    50 g Cebuli
+                </ingredient>
+                <ingredient n="7">
+                    50 g Marchewki
+                </ingredient>
+                <ingredient n="8">
+                    0,25L Białego wina
+                </ingredient>
+                <ingredient n="9">
+                    Oliwa z oliwek extravirgin
+                </ingredient>
+                <ingredient n="10">
+                    3L Wody
+                </ingredient>
+                <ingredient n="11">
+                    0,25L Mleka
+                </ingredient>
+                <ingredient n="12">
+                    Sól Pierz
+                </ingredient>
+            </ingredients>
+            <steps>
+                <step n="1">
+                    Aby przygotować sos bolognese, obierz marchewkę i cebulę i odetnij końce z łodyg selera. Pokrój warzywa w drobną kostkę.
+                </step>
+                <step n="2">
+                    Wlej łyżkę oleju do rondla i dodaj warzywa, podsmaż na małym ogniu przez około 10 minut, mieszając od czasu do czasu aż dno patelni będzie suche.
+                </step>
+                <step n="3">
+                    Dodaj mieloną wołowinę i wieprzowinę od czasu do czasu mieszając. Nawet te będą musiały powoli przyrumienić przez około 10 minut.
+                </step>
+                <step n="4">
+                    Polej białym winem i pozwól mu wyparować na dużym ogniu.
+                </step>
+                <step n="5">
+                    Jak tylko alkohol wyparuje i jeszcze raz dno się wysuszy, zmniejsz ogień i dodaj przecier pomidorowy.
+                </step>
+                <step n="6">
+                    Następnie wlej tylko 1 z 3 litrów wody, dodaj szczyptę soli, wymieszaj i gotuj na średnim ogniu przez godzinę.
+                </step>
+                <step n="7">
+                    Dodaj kolejny litr wody, wymieszaj i gotuj przez kolejną godzinę.
+                </step>
+                <step n="8">
+                    Pod koniec drugiej godziny gotowania dolej ostatni litr wody i kontynuuj gotowanie na małym ogniu przez kolejną godzinę.
+                </step>
+                <step n="9">
+                    W ten sposób sos będzie gotował się przez co najmniej 3 godziny.
+                </step>
+                <step n="10">
+                    Dopraw solą i pieprzem, wyłącz ogień, dodaj mleko i wymieszaj.
+                </step>
+                <step n="11">
+                    Postaw garnek z wodą na ogniu i zagotuj. Do wrzącej wody wsyp płaską łyżkę grubej soli a następnie wrzuć makaron, biorąc pod uwagę czas gotowania.
+                </step>
+                <step n="12">
+                    Odcedź makaron, przełóż na podgrzaną patelnie, dodaj sos i wymieszaj. Nałóż na talerze i przypraw jeszcze jedną łyżką sosu ragu. Na koniec możesz posypać tartym serem Parmigiano.
+                </step>
+            </steps>
+            <nutrition>
+                <calories>607</calories>
+                <carbs>55g</carbs>
+                <fat>27g</fat>
+                <protein>34g</protein>
+            </nutrition>
+        </recipe>
 
+    </recipeSection>
 
 </recipeList>
