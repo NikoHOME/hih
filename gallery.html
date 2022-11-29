@@ -7,6 +7,7 @@
         <title> Galeria</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/style-dropdown.css">
         <link rel="stylesheet" href="css/style-nav.css">
@@ -18,7 +19,10 @@
     <body class="body body-theme">
 
         <nav class="topnav topnav-theme">
-            <span class="span-nav"> Projekt HIH </span>
+            <svg width="48" height="48" class="svg-class">
+                <rect x="14" y="14" width="20" height="20" stroke="black" stroke-width="4" fill="grey" />
+            </svg>
+            <span class="span-nav"> Galeria </span>
             <img src="img/sun.png" id="modeImg1" alt="sun">
             <label class="switch">
                 <input id="checkBox1" type="checkbox" onclick="manageModes();">
@@ -27,34 +31,34 @@
 
             <a class="a-nav a-nav-theme active" href="#Home">Galeria</a>
             <a class="a-nav a-nav-theme" href="recipe.html">Przepisy</a>
-            <a class="a-nav a-nav-theme " href="index.html">Front</a>
+            <a class="a-nav a-nav-theme" href="index.html">Front</a>
             <div style="padding-left: 0;" class="a-nav"> </div>
             <div class="dropdown">
                 <div class="dropbtn">Influencers</div>
                 <div class="dropdown-content">
-                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
-                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
-                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                  <a class="anim1" href="https://www.youtube.com/@EthanChlebowski" target="_blank">Ethan Chlebowski</a>
+                  <a class="anim2" href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw" target="_blank">Binging With Babish</a>
+                  <a class="anim3" href="https://www.youtube.com/@aragusea" target="_blank">Adam Ragusea</a>
                 </div>
             </div>
 
         </nav>
         <nav class="sidenav sidenav-theme">
-            <span class="span-nav span-nav-theme"> Projekt HIH </span>
+            <span class="span-nav span-nav-side span-nav-theme"> Galeria </span>
             <img src="img/sun.png" id="modeImg2" alt="sun">
             <label class="switch">
                 <input id="checkBox2" type="checkbox" onclick="manageModes();">
                 <span class="slider"></span>
             </label>         
-            <a class="a-nav-side a-nav-theme " href="index.html">Front</a>
+            <a class="a-nav-side a-nav-theme" href="index.html">Front</a>
             <a class="a-nav-side a-nav-theme" href="recipe.html">Przepisy</a>
             <a class="a-nav-side a-nav-theme active" href="#Home">Galeria</a>
             <div class="dropdown">
                 <div class="dropbtn-side">Influencers</div>
                 <div class="dropdown-content">
-                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
-                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
-                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                  <a class="anim1" href="https://www.youtube.com/@EthanChlebowski" target="_blank">Ethan Chlebowski</a>
+                  <a class="anim2" href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw" target="_blank">Binging With Babish</a>
+                  <a class="anim3" href="https://www.youtube.com/@aragusea" target="_blank">Adam Ragusea</a>
                 </div>
             </div>   
 
@@ -68,16 +72,45 @@
             </header>
             <hr class="solid solid-theme">
             <section class="content content-theme">
+                <ul class="ul-style-header">
+                    <li class="margin-left large-text">
+                        <span>Spis treści</span>
+                        <ul class="ul-style">
+                            <li class="margin-left small-text">
+                                <a href="#li1">Mięsa długopieczone</a>
+                            </li>
+                            <li class="margin-left small-text">
+                                <a href="#li2">Stek strogonof na patelni</a>
+                            </li>
+                            <li class="margin-left small-text">
+                                <a href="#li3">Crossaint</a>
+                            </li>
+                            <li class="margin-left small-text">
+                                <a href="#li4">Mule na winie</a>
+                            </li>
+                            <li class="margin-left small-text">
+                                <a href="#li5">Sushi</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
                 <ul class="ul-style">
-                    <li class="margin-left large-text"> 
+                    <li class="margin-left large-text" id="li1"> 
                         <span>Mięsa długopieczone</span>
                         <div class="min-height">
                             <span class="small-text">
                                 Przepisy na mięso pieczone dzięki swojej prostocie nie są wrażliwe na modyfikacji dzięki czemu łatwo jest dodać swój originalny dodatek.
                             </span>
+                            <div class="imgDiv">
+                                <img class="imgGal" src="img/gallery/pot.jpg" alt="potRoast">
+                            </div>
+                            <a class="author"  href="https://www.theseasonedmom.com/dutch-oven-pot-roast/" target="_blank">
+                                Autor - Blair Lonergan
+                            </a>
                         </div>
                     </li>
-                    <li class="margin-left large-text">
+                    <li class="margin-left large-text" id="li2">
                         <span>Stek strogonof na patelni</span>
                         <div class="min-height">
                             <span class="small-text">
@@ -85,22 +118,54 @@
                                 które tworzą idelna baze do sosu.
                             </span>
                         </div>
+                        <div>
+                            <img class="imgGal" src="img/gallery/pan.jpg" alt="strogonoff">
+                        </div>
+                        <a class="author" href="https://www.taste.com.au/recipes/pan-seared-steaks-stroganoff-sauce-recipe/dfyuqbmc?nk=cd76983b2307af59223faa37b58a8609-1669579399" target="_blank">
+                            Autor - Coles Magazine
+                        </a>   
                     </li>                    
-                    <li class="margin-left large-text">
+                    <li class="margin-left large-text" id="li3">
                         <span>Crossaint</span>
                         <div class="min-height">
                             <span class="small-text">
                                 Crossainty oraz inne rogale są zadziwająco przydatne w codziennej kuchni oraz wyglądają nieziemsko przy dobrym wykonaniu.  
                             </span>
                         </div>
+                        <div>
+                            <img class="imgGal" src="img/gallery/croissant.jpg" alt="croissant">
+                        </div>
+                        <a class="author" href="https://www.kuali.com/recipe/breads/croissant/" target="_blank">
+                            Autor - Amy Beh
+                        </a>                    
                     </li>  
-                    <li class="margin-left large-text">
+                    <li class="margin-left large-text" id="li4">
                         <span>Mule na winie</span>
                         <div class="min-height">
                             <span class="small-text">
-                                Mule często kojarzą się z drogimi daniami z restauracji, jednakżke ich przygotowanie nie jest, aż tak skomplikowane ale robi wrażenie.
+                                Mule wrzuca się razem z drogimi daniami z restauracji, jednakżke ich przygotowanie nie jest skomplikowane, a w polsce są bardzo egzotyczne przez brak popularności.
                             </span>
                         </div>
+                        <div>
+                            <img class="imgGal" src="img/gallery/mussel.webp" alt="mule">
+                        </div>
+                        <a class="author" href="https://www.eatthis.com/mussels-white-wine-recipe/" target="_blank">
+                            Autor - David Zinczenko i Matt Goulding
+                        </a>                        
+                    </li>  
+                    <li class="margin-left large-text" id="li5">
+                        <span>Sushi</span>
+                        <div class="min-height">
+                            <span class="small-text">
+                                Sushi rolkowane jest jedzeniem bardzo estetycznym ale i odziwo prostym i łatwym do modyfikowania. Wystarczy dobrze przygotować ryż, a reszta to będzie sama przyjemność. 
+                            </span>
+                        </div>
+                        <div>
+                            <img class="imgGal" src="img/gallery/maki.webp" alt="sushi">
+                        </div>
+                        <a class="author" href="https://www.japancentre.com/en/recipe/18-maki-sushi-rolls/" target="_blank">
+                            Autor - Japan Centre
+                        </a>                        
                     </li>  
                 </ul>
             </section>

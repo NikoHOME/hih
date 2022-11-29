@@ -5,6 +5,7 @@
         <title> Galeria</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta charset="utf-8">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/style-dropdown.css">
         <link rel="stylesheet" href="css/style-nav.css">
@@ -25,12 +26,43 @@
         {
             window.availableTags.push(tag)
         };
+
+        function addElem(type)
+        {
+            const elem = document.createElement("li");
+            elem.setAttribute("name","input-li");
+            elem.setAttribute("value","text");
+            if(type=="ing")
+            {
+                var mainUl = document.getElementById('input-ul-ing');
+                elem.innerHTML="<input type=\"text\" id=\"input-text\"></input> <button type=\"button\" onclick=\"return this.parentNode.remove();\" class=\"remove\">Usuń Składnik</button>"
+
+            }
+            else
+            {
+                var mainUl = document.getElementById('input-ul-pro');
+                elem.innerHTML="<input type=\"text\" id=\"input-text\"></input> <button type=\"button\" onclick=\"return this.parentNode.remove();\" class=\"remove\">Usuń Krok</button>"
+            }
+            mainUl.appendChild(elem);
+        }
+
+        function submitForm()
+        {
+            if(sessionStorage.isEdit=="false") 
+            {
+                updateCondition(true);
+            }
+            document.forms['mainform'].submit();
+        }
         </script>
     </head>
     <body class="body body-theme">
 
         <nav class="topnav topnav-theme">
-            <span class="span-nav"> Projekt HIH </span>
+            <svg width="48" height="48" class="svg-class">
+                <rect x="14" y="14" width="20" height="20" stroke="black" stroke-width="4" fill="grey" />
+            </svg>
+            <span class="span-nav"> Przepisy</span>
             <img src="img/sun.png" id="modeImg1" alt="sun">
             <label class="switch">
                 <input id="checkBox1" type="checkbox" onclick="manageModes();">
@@ -39,34 +71,34 @@
 
             <a class="a-nav a-nav-theme" href="gallery.html">Galeria</a>
             <a class="a-nav a-nav-theme active" href="#Home">Przepisy</a>
-            <a class="a-nav a-nav-theme " href="index.html">Front</a>
+            <a class="a-nav a-nav-theme" href="index.html">Front</a>
             <div style="padding-left: 0;" class="a-nav"> </div>
             <div class="dropdown">
                 <div class="dropbtn">Influencers</div>
                 <div class="dropdown-content">
-                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
-                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
-                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                  <a class="anim1" href="https://www.youtube.com/@EthanChlebowski" target="_blank">Ethan Chlebowski</a>
+                  <a class="anim2" href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw" target="_blank">Binging With Babish</a>
+                  <a class="anim3" href="https://www.youtube.com/@aragusea" target="_blank">Adam Ragusea</a>
                 </div>
             </div>
 
         </nav>
         <nav class="sidenav sidenav-theme">
-            <span class="span-nav span-nav-theme"> Projekt HIH </span>
+            <span class="span-nav span-nav-side span-nav-theme"> Przepisy </span>
             <img src="img/sun.png" id="modeImg2" alt="sun">
             <label class="switch">
                 <input id="checkBox2" type="checkbox" onclick="manageModes();">
                 <span class="slider"></span>
             </label>         
-            <a class="a-nav-side a-nav-theme " href="index.html">Front</a>
+            <a class="a-nav-side a-nav-theme" href="index.html">Front</a>
             <a class="a-nav-side a-nav-theme active" href="#Home">Przepisy</a>
             <a class="a-nav-side a-nav-theme" href="gallery.html">Galeria</a>
             <div class="dropdown">
                 <div class="dropbtn-side">Influencers</div>
                 <div class="dropdown-content">
-                  <a href="https://www.youtube.com/@EthanChlebowski">Ethan Chlebowski</a>
-                  <a href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw">Binging With Babish</a>
-                  <a href="https://www.youtube.com/@aragusea">Adam Ragusea</a>
+                  <a class="anim1" href="https://www.youtube.com/@EthanChlebowski" target="_blank">Ethan Chlebowski</a>
+                  <a class="anim2" href="https://www.youtube.com/channel/UCJHA_jMfCvEnv-3kRjTCQXw" target="_blank">Binging With Babish</a>
+                  <a class="anim3" href="https://www.youtube.com/@aragusea" target="_blank">Adam Ragusea</a>
                 </div>
             </div>   
 
@@ -80,16 +112,56 @@
         </header>
 
         <section class="content content-theme">
-            <p class="margin-left">Wyszukaj po nazwie</p>
-            <form action="find.php" method="get" class="ui-widget margin-left">
-                <label for="tags"> Nazwa : </label> 
-                <input id="tags" name="search" type="text">
-                <input type="submit" value="Szukaj" ><br>
+            <p class="margin-left large-text">Dodaj swój przepis</p>
+            <form id="mainform" action="post.php" target="_blank" method="post" class="ui-widget margin-left">
+                <label for="name"> Nazwa : </label><br> 
+                <input id="name" name="name" type="text"><br><br>
+                <label for="desc"> Opis : </label><br>
+                <textarea name="desc" id="desc" placeholder="..."></textarea><br><br>
+                <label for="ing"> Składniki : </label><br>
+                <textarea name="ing" id="ing" placeholder="..."></textarea><br><br>
+                <label for="meth"> Kroki : </label><br>
+                <textarea name="meth" id="meth" placeholder="..."></textarea><br><br>
+                <label>
+                    <span>Czas w minutach:</span><br>
+                    <input type="number" name="time"  required>
+                </label><br><br>
+                <label>
+                    <span>Porcja na osoby</span><br>
+                    <input type="number" name="size" min="1"  required>
+                </label><br><br> 
+
+                <span>Trudność</span><br>
+            
+                <input type="radio" id="Choice1" name="diff" value=1>
+                <label for="Choice1">Łatwy</label>
+        
+                <input type="radio" id="Choice2" name="diff" value=2>
+                <label for="Choice2">Średni</label>
+        
+                <input type="radio" id="Choice3" name="diff" value=3>
+                <label for="Choice3">Trudny</label><br><br>
+
+                <label for="vege">Jest Vegetariańskie</label><br>
+                <input name="vege" id="vege" type="checkbox"><br>
+                <label for="vegan">Jest Vegańskie</label><br>
+                <input name="vegan" id="vegan" type="checkbox"><br><br>
+
+                <label for="type">Typ dania:</label><br>
+                <select name="type" id="type">
+                    <option value="misc">Inne</option>
+                    <option value="breakfast">Śniadanie</option>
+                    <option value="dinner">Obiad</option>
+                    <option value="supper">Kolacja</option>
+                    <option value="dessert">Desert</option>
+                  </select><br><br> 
+                  <button type="button" onclick="submitForm()">Wyślij </button>   
+                  <input type="reset">           
             </form>
         </section>
 
         <section class="content content-theme">
-            <div id="result" class="margin-left">
+            <div id="result" class="margin-left small-text"><br>
                 Ilość dodanych przepisów : 0
             </div>
         </section>

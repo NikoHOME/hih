@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!ENTITY % basicData "CDATA #REQUIRED">
+    <!ELEMENT recipeList (recipeSection*)>
+    <!ELEMENT recipeSection (recipe*)>
+    <!ATTLIST recipeSection type %basicData;> 
+    <!ELEMENT recipe (name,description,(links|(images,links)),ingredients,steps,nutrition?)>
+    <!ATTLIST recipe difficulty %basicData;>
+    <!ATTLIST recipe time %basicData;>
+    <!ATTLIST recipe isVegan (true|false) "false">
+    <!ATTLIST recipe isVege (true|false) "false">
+    <!ATTLIST recipe sizemin %basicData;>
+    <!ATTLIST recipe sizemax %basicData;>
+
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+
+    <!ENTITY % list "entry*">
+
+    <!ELEMENT images (image*)>
+    <!ELEMENT links (link*)>
+    <!ELEMENT ingredients (%list;)>
+    <!ELEMENT steps (%list;)>
+
+    <!ELEMENT image (#PCDATA)>
+    <!ATTLIST image file %basicData;>
+    <!ELEMENT link (#PCDATA)>
+    <!ATTLIST link url %basicData;>
+    <!ELEMENT entry (#PCDATA)>
+    <!ATTLIST entry n %basicData;>
+
+    <!ELEMENT nutrition (calories,carbs,fat,protein,extra?)>
+    <!ELEMENT calories (#PCDATA)>
+    <!ELEMENT carbs (#PCDATA)>
+    <!ELEMENT fat (#PCDATA)>
+    <!ELEMENT protein (#PCDATA)>
+    <!ELEMENT extra (#PCDATA)>

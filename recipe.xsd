@@ -17,45 +17,184 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:attribute name="n" id="n" type="xs:short"></xs:attribute>
+
+    <xs:complexType name="ingItem">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="n"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="stpItem">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="n"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="ingNode">
+        <xs:sequence>
+            <xs:element name="entry" minOccurs="0" maxOccurs="unbounded" type="ingItem" ></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="stpNode">
+        <xs:sequence>
+            <xs:element name="entry" minOccurs="0" maxOccurs="unbounded" type="stpItem" ></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    
+
+    <xs:complexType name="linkType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="url">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="(https://|http://).*"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="linksType">
+        <xs:sequence>
+            <xs:element name="link" type="linkType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="imagesType">
+        <xs:sequence>
+            <xs:element name="image" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="file">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value=".*\.(jpg|png|jpeg|gif)"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>  
+
+    <xs:simpleType name="listType">
+        <xs:list itemType="xs:string"></xs:list>
+    </xs:simpleType>
+    
+    <xs:group name="nutriGroup">
+        <xs:sequence>
+            <xs:element name="nutrition" minOccurs="0" maxOccurs="1" >
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="calories" type="uInteger"></xs:element>
+                        <xs:element name="carbs" type="weightType"></xs:element>
+                        <xs:element name="fat" type="weightType"></xs:element>
+                        <xs:element name="protein" type="weightType"></xs:element>
+                        <xs:element name="extra" type="listType" minOccurs="0" maxOccurs="1"></xs:element>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
 
         <xs:complexType name="recipeType">
             <xs:sequence>
-                <xs:element name="name" type="xs:string"></xs:element>
+                <xs:element name="name" type="medString"></xs:element>
                 <xs:element name="description" type="xs:string"></xs:element>
-                <xs:element name="image" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
-                <xs:element name="link" type="xs:string" minOccurs="0" maxOccurs="1"></xs:element>
-                <xs:element name="ingredients">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="ingredient" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="steps">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="step" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="nutrition" minOccurs="0" maxOccurs="1" >
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="calories" type="xs:string"></xs:element>
-                            <xs:element name="carbs" type="xs:string"></xs:element>
-                            <xs:element name="fat" type="xs:string"></xs:element>
-                            <xs:element name="protein" type="xs:string"></xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:choice>
+                    <xs:sequence>
+                        <xs:element name="images" type="imagesType"></xs:element>
+                        <xs:element name="links" type="linksType"></xs:element>
+                    </xs:sequence>
+                    <xs:element name="links" type="linksType"></xs:element>
+                </xs:choice>
+                <xs:element name="ingredients" type="ingNode"></xs:element>
+                <xs:element name="steps" type="stpNode"></xs:element>
+                <xs:group ref="nutriGroup"/>
                 
             </xs:sequence>
-            <xs:attribute name="difficulty" type="xs:string"/>
-            <xs:attribute name="time" type="xs:integer"/>
+            <xs:attribute name="difficulty" type="shortString"/>
+            <xs:attribute name="time" type="uInteger"/>
             <xs:attribute name="isVegan" type="xs:boolean"/>
-            <xs:attribute name="isVege" type="xs:boolean"/>
-            <xs:attribute name="sizemin" type="xs:integer"/>
-            <xs:attribute name="sizemax" type="xs:integer"/>
+            <xs:attribute name="isVege" type="bool"/>
+            <xs:attribute name="sizemin">
+                <xs:simpleType>
+                    <xs:restriction base="uInteger">
+                        <xs:minInclusive value="1"></xs:minInclusive>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="sizemax">
+                <xs:simpleType>
+                    <xs:restriction base="uInteger">
+                        <xs:maxInclusive value="20"></xs:maxInclusive>
+            </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
         </xs:complexType>
+
+        <xs:simpleType name="uInteger" id="uInteger">
+            <xs:restriction base="xs:nonNegativeInteger">
+                <xs:minInclusive value="0"/>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:simpleType name="longString" id="longString">
+            <xs:restriction base="xs:string">
+                <xs:minLength value="30"></xs:minLength>
+                <xs:maxLength value="200"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:simpleType name="medString" id="medString">
+            <xs:restriction base="xs:string">
+                <xs:minLength value="10"></xs:minLength>
+                <xs:maxLength value="50"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:simpleType name="shortString" id="shortString">
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="20"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:simpleType name="bool" id="bool">
+            <xs:restriction base="shortString">
+                <xs:enumeration value="true"></xs:enumeration>
+                <xs:enumeration value="false"></xs:enumeration>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:simpleType name="weightTypeString" id="weightTypeString">
+            <xs:restriction base="xs:string">
+                <xs:pattern value=".*(g|dag|dkg|kg)"/>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:simpleType name="weightTypeInt" id="weightTypeInt">
+            <xs:restriction base="xs:positiveInteger">
+                <xs:maxExclusive value="1000"></xs:maxExclusive>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:simpleType name="weightType">
+            <xs:union memberTypes="weightTypeInt weightTypeString"></xs:union>
+        </xs:simpleType>
+
 
 </xs:schema> 
